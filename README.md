@@ -1,4 +1,4 @@
-# plate-and-spot-optimizer
+# plate-platform-optimizer
 
 - SQL database
 Lifter and which bar (0 for m, 1 for f)
