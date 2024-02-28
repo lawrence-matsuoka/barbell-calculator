@@ -4,6 +4,7 @@
 Lifter and which bar (0 for m, 1 for f)
 Exceptions for relationships aka who works well (jason, lisa) who doesn't (me, dorian or ronnie, jay)
 Link PR to exercises, exercises links to (floor, block, rack, power rack)
+Spots 1 through 6 which have attributes (1 or 0 for power rack, 1 or 0 for closeness to blocks, and all platforms have floor and rack)
 
 - Training bar plate optimizer
 Optimizer 1
