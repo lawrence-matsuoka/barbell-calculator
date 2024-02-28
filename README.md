@@ -1,6 +1,6 @@
 # plate-and-spot-optimizer
 
-- Database
+- SQL database
 Lifter and which bar (0 for m, 1 for f)
 Exceptions for relationships aka who works well (jason, lisa) who doesn't (me, dorian or ronnie, jay)
 Link PR to exercises, exercises links to (floor, block, rack, power rack)
@@ -17,3 +17,7 @@ Optimizer 2
 Weights being lifted
 Relationships
 Exercise correlation (if the weights are close enough then can both be lifting from the floor or rack)
+
+Should I use C or Python or Julia for the calculation?
+
+I am thinking most likely Python for ease of use and the using with SQL.
