@@ -4,7 +4,7 @@
 
 - SQL
 - C
-- Some optimization library (most likely linear) callable by C (NLopt if non linear)
+- LPSolve or GLPK for linear optimization, NLOpt for non linear
 
 ## Database
 - Lifters and competition bar (0 for 20kg, 1 for 15kg)
