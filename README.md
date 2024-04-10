@@ -1,24 +1,29 @@
 # plate-platform-optimizer
 
-- SQL database
-Lifter and which bar (0 for m, 1 for f)
-Exceptions for relationships aka who works well (jason, lisa) who doesn't (me, dorian or ronnie, jay)
-Link PR to exercises, exercises links to (floor, block, rack, power rack)
-Spots 1 through 6 which have attributes (1 or 0 for power rack, 1 or 0 for closeness to blocks, and all platforms have floor and rack)
+## Technology
 
-- Training bar plate optimizer
-Optimizer 1
-Which plates based on what plates are available is best for everyone to get the weight they need
-we've got 4 pairs of red plates, x amount of blue plates, etc.
-Everyone present is doing exercise 1, how to distribute plates
-who is lifting on the same bar?
+- SQL
+- C
+- Some optimization library (most likely linear) callable by C (NLopt if non linear)
 
-- Spot optimizer for who should go where
-Optimizer 2
-Weights being lifted
-Relationships
-Exercise correlation (if the weights are close enough then can both be lifting from the floor or rack)
+## Database
+- Lifters and competition bar (0 for 20kg, 1 for 15kg)
+- Relationships between lifters (who works well and who doesn't and easy to modify)
+- Each PR is linked to what we'll refer to as a platform "feature" (floor, block, rack, power rack)
+- Each lifter has a table with the number associated with their PR
+- Exercises are linked to PR
+- Spots 1 through 6 which have attributes (1 or 0 for power rack, distance from blocks (units in platforms, i.e., platforms 3,4 = 1 while others = 0), all platforms have floor and rack assumed)
+- Availability of plates (there are x number of 25kg plates, y 20kg plates, and pound plates commonly used as well for warmup)
 
-Should I use C or Python or Julia for the calculation?
+## Platform allocation optimizer
+- Weights being lifted
+- Exercise correlation (lifters with similar weights can both lift from the same feature, or different weights can lift have lifters on different features)
+- Relationship exceptions
 
-I am thinking most likely Python for ease of use and the using with SQL.
+## Training bar plate optimizer
+- Visualization similar to competition monitor
+- Which plates based on what plates are available is best for everyone to get the weight they need
+- How to distribute plates based on what is currently programmed, if this is a live app, could even be updating as people checkoff a box to mark completion of set or exercise
+- Account for who is lifting on the same bar
+
+## To add later
