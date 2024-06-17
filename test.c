@@ -1,5 +1,4 @@
-#include "consts.h"
-#include "vars.h"
+#include "plateInfo.h"
 #include <stdio.h>
 
 int currentBar;

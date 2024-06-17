@@ -1,58 +1,58 @@
-#include "consts.h" //
-#include "vars.h"   //
+#include "plateInfo.h"   //
 #include <stdio.h>
 #include <string.h>
 
+
 // Large plates availability
-int redAvail = 4;
-int blueAvail = 4;
-int yellowAvail = 2;
-int greenAvail = 4;
-int whiteAvail = 2;
+int red_avail = 4;
+int blue_avail = 4;
+int yellow_avail = 2;
+int green_avail = 4;
+int white_avail = 2;
 
 // Small plates availability
-int smRedAvail = 2;
-int smBlueAvail = 2;
-int smYellowAvail = 2;
-int smGreenAvail = 2;
-int smWhiteAvail = 2;
+int sm_red_avail = 2;
+int sm_blue_avail = 2;
+int sm_yellow_avail = 2;
+int sm_green_avail = 2;
+int sm_white_avail = 2;
 
 // Bar type of M (20) or F (15)
-char barType[1];
-int currentBar = 0;
+char bar_type[1];
+int current_bar = 0;
 
-int getBarType() {
-  scanf("%s", barType);
-  if (strcmp(barType, "F") == 0) {
-    currentBar = femaleBar;
+int get_bar_type() {
+  scanf("%s", bar_type);
+  if (strcmp(bar_type, "F") == 0) {
+    current_bar = female_bar;
   } else {
-    currentBar = maleBar;
+    current_bar = male_bar;
   }
 
-  return currentBar;
+  return current_bar;
 }
 
 int main() {
   // Choose male or female bar and return the weight of the barbell itself by
   // calling getBarType
   printf("Enter 'M' for the male 20kg bar or 'F' for the female 15kg bar: ");
-  getBarType();
+  get_bar_type();
 
-  printf("%d\n", currentBar);
+  printf("%d\n", current_bar);
 
   // Input the amount of weight to load onto the bar
-  int kgOnBar;
+  int kg_loaded;
   printf("Enter the desired weight on the bar: ");
-  scanf("%d", &kgOnBar);
-  printf("%d\n", kgOnBar);
+  scanf("%d", &kg_loaded);
+  printf("%d\n", kg_loaded);
 
   // Determine the amount of weight needed in plates
-  int kgNeeded = kgOnBar - currentBar;
-  printf("%d\n", kgNeeded);
+  int kg_needed = kg_loaded - current_bar;
+  printf("%d\n", kg_needed);
 
   printf("Modulo work?");
-  int someVar = (redVal * 2) % 40;
-  printf("%d", someVar);
+  int some_var = (red_val * 2) % 40;
+  printf("%d", some_var);
 
   return 0;
 }
