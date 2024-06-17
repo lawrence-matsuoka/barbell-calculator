@@ -1,7 +1,10 @@
+#include "consts.h"
+#include "vars.h"
 #include <stdio.h>
-#include "vars.c"
 
-int main(){
-    printf("%d", currentBar);
-    return 0;
+int currentBar;
+
+int main() {
+  printf("%d", currentBar);
+  return 0;
 }

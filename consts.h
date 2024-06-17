@@ -12,5 +12,3 @@ const int smBlueVal = 2;
 const double smYellowVal = 1.5;
 const int smGreenVal = 1;
 const double smWhiteVal = 0.5;
-
-
