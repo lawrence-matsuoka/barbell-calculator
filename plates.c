@@ -1,4 +1,4 @@
-#include "plateInfo.h"   //
+#include "plate_info.h"   //
 #include <stdio.h>
 #include <string.h>
 
@@ -32,9 +32,26 @@ int get_bar_type() {
   return current_bar;
 }
 
+//int check_red() {
+
+//}
+
+/*
+* check_plates(a, b, c, d, e)
+* while kg_needed >0 loop through
+*   kg_needed > 50? check availability of reds
+*     if available, add to red count
+*   > 40? check availability of blues
+*     if available, add to blue count
+* 
+* are 2 reds available?, 2 blues?, 2 yellows, etc?
+**/
+
 int main() {
-  // Choose male or female bar and return the weight of the barbell itself by
-  // calling getBarType
+  /*
+  * Choose male or female bar and return the weight of the barbell itself by
+  * calling getBarType
+  */
   printf("Enter 'M' for the male 20kg bar or 'F' for the female 15kg bar: ");
   get_bar_type();
 
@@ -44,6 +61,7 @@ int main() {
   int kg_loaded;
   printf("Enter the desired weight on the bar: ");
   scanf("%d", &kg_loaded);
+  printf("Weight loaded (kg): ");
   printf("%d\n", kg_loaded);
 
   // Determine the amount of weight needed in plates
@@ -51,8 +69,6 @@ int main() {
   printf("%d\n", kg_needed);
 
   printf("Modulo work?");
-  int some_var = (red_val * 2) % 40;
+  int some_var = (red_val * 4) % 40;
   printf("%d", some_var);
-
-  return 0;
 }

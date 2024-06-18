@@ -1,9 +1,9 @@
-#include "plateInfo.h"
+#include "plates.c"
 #include <stdio.h>
 
-int currentBar;
+int current_bar;
 
-int main() {
-  printf("%d", currentBar);
-  return 0;
+int test() {
+  printf("%d", current_bar);
+  return current_bar;
 }
