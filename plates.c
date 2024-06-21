@@ -1,5 +1,5 @@
-#include "plate_info.h"  // 
-#include "library.h"  //
+#include "library.h"    //
+#include "plate_info.h" //
 #include <stdio.h>
 
 // Large plates availability
@@ -39,7 +39,7 @@ int main() {
    * calling get_bar_type
    */
   printf("Enter 'M' for the male 20kg bar or 'F' for the female 15kg bar: ");
-  get_bar_type();
+  current_bar = get_bar_type(bar_type, current_bar, female_bar, male_bar);
 
   printf("%d\n", current_bar);
 
@@ -61,4 +61,6 @@ int main() {
 
   kg_needed = kg_needed - red_result * red_val;
   printf("%d", kg_needed);
+
+  return 0;
 }
