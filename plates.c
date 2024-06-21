@@ -2,6 +2,8 @@
 #include "plate_info.h" //
 #include <stdio.h>
 
+// Compile libraries by running `gcc -o <output> main.c library1.c library2.c`
+
 // Large plates availability
 int red_avail = 4;
 int blue_avail = 4;
