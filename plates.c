@@ -1,6 +1,6 @@
-#include "plate_info.h" //
+#include "plate_info.h"  // 
+#include "library.h"  //
 #include <stdio.h>
-#include <string.h>
 
 // Large plates availability
 int red_avail = 4;
@@ -32,27 +32,6 @@ int sm_white_count = 0;
 // Bar type of M (20) or F (15)
 char bar_type[1];
 int current_bar = 0;
-
-int get_bar_type() {
-  scanf("%s", bar_type);
-  if (strcmp(bar_type, "F") == 0) {
-    current_bar = female_bar;
-  } else {
-    current_bar = male_bar;
-  }
-
-  return current_bar;
-}
-
-int plates_needed(int plate_weight, int plate_val, int plate_avail,
-                  int plate_count) {
-  while (plate_weight >= (plate_val * 2) && plate_avail >= 2) {
-    plate_count += 2;
-    plate_avail -= 2;
-    plate_weight -= (2 * plate_val);
-  }
-  return plate_count;
-}
 
 int main() {
   /*
