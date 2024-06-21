@@ -46,13 +46,10 @@ int get_bar_type() {
 
 int plates_needed(int plate_weight, int plate_val, int plate_avail,
                   int plate_count) {
-  while (plate_weight >= (plate_val * 2)) {
-    if (plate_weight >= (plate_val * 2) && plate_avail >= 2) {
-      plate_count += 2;
-      plate_avail -= 2;
-      plate_weight = plate_weight - (2 * plate_val);
-    }
-    printf("%d", plate_count);
+  while (plate_weight >= (plate_val * 2) && plate_avail >= 2) {
+    plate_count += 2;
+    plate_avail -= 2;
+    plate_weight -= (2 * plate_val);
   }
   return plate_count;
 }
@@ -60,7 +57,7 @@ int plates_needed(int plate_weight, int plate_val, int plate_avail,
 int main() {
   /*
    * Choose male or female bar and return the weight of the barbell itself by
-   * calling getBarType
+   * calling get_bar_type
    */
   printf("Enter 'M' for the male 20kg bar or 'F' for the female 15kg bar: ");
   get_bar_type();
@@ -78,7 +75,11 @@ int main() {
   int kg_needed = kg_loaded - current_bar;
   printf("%d\n", kg_needed);
 
-  plates_needed(kg_needed, red_val, red_avail, red_count);
-  printf("Reds: ");
-  printf("%d\n", red_count);
+  int red_result = plates_needed(kg_needed, red_val, red_avail, red_count);
+  printf("Reds: %d\n", red_result);
+
+  red_avail = red_avail - red_result;
+
+  kg_needed = kg_needed - red_result * red_val;
+  printf("%d", kg_needed);
 }
