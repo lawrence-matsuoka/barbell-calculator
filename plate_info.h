@@ -26,12 +26,24 @@ extern int yellow_avail;
 extern int green_avail;
 extern int white_avail;
 
-// Small plates availability
 extern int sm_red_avail;
 extern int sm_blue_avail;
 extern int sm_yellow_avail;
 extern int sm_green_avail;
 extern int sm_white_avail;
+
+// Count of plates used
+extern int red_count;
+extern int blue_count;
+extern int yellow_count;
+extern int green_count;
+extern int white_count;
+
+extern int sm_red_count;
+extern int sm_blue_count;
+extern int sm_yellow_count;
+extern int sm_green_count;
+extern int sm_white_count;
 
 // Bar type of M (20) or F (15)
 extern int current_bar;
