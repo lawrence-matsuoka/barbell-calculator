@@ -7,4 +7,5 @@ Plate plates[] = {{"Reds", 25, 2, 0},         {"Blues", 20, 4, 0},
                   {"Little blues", 2, 2, 0},  {"Little yellows", 1.5, 2, 0},
                   {"Little greens", 1, 2, 0}, {"Little whites", 0.5, 2, 0}};
 
+// 
 int plate_count = sizeof(plates) / sizeof(plates[0]);

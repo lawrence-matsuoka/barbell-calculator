@@ -10,25 +10,22 @@ const int male_bar = 20;
 const int female_bar = 15;
 
 int main() {
-  /*
-   * Choose male or female bar and return the weight of the barbell itself by
-   * calling get_bar_type
-   */
+  //
   printf("Enter 'M' for the male 20kg bar or 'F' for the female 15kg bar: ");
   current_bar = get_bar_type(bar_type, current_bar, female_bar, male_bar);
-  printf("%d\n", current_bar);
+  printf("Weight of bar itself: %d\n", current_bar);
 
   // Input the amount of weight to load onto the bar
   double kg_loaded;
   printf("Enter the desired weight on the bar: ");
   scanf("%lf", &kg_loaded);
-  printf("Weight loaded (kg): ");
-  printf("%lf\n", kg_loaded);
+  printf("Weight loaded (kg): %lf\n", kg_loaded);
 
   // Determine the amount of weight needed in plates
   double kg_needed = kg_loaded - current_bar;
-  printf("%lf\n", kg_needed);
+  printf("Weight needed: %lf\n", kg_needed);
 
+  // 
   for (int i = 0; i < plate_count; i++) {
     int result = plates_needed(kg_needed, plates[i].val, plates[i].avail,
                                plates[i].count);
