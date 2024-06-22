@@ -1,2 +1,2 @@
 default:
-	gcc -o app plates.c library.c
+	gcc -o app main.c plates.c library.c
