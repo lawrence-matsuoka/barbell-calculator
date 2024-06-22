@@ -13,12 +13,11 @@ int get_bar_type(char *bar_type, int current_bar, int female_bar,
   return current_bar;
 }
 
-int plates_needed(int plate_weight, int plate_val, int plate_avail,
-                  int plate_count) {
-  while (plate_weight >= (plate_val * 2) && plate_avail >= 2) {
-    plate_count += 2;
-    plate_avail -= 2;
-    plate_weight -= (2 * plate_val);
+int plates_needed(double weight, double val, int avail, int count) {
+  while (weight >= (val * 2) && avail >= 2) {
+    count += 2;
+    avail -= 2;
+    weight -= (2 * val);
   }
-  return plate_count;
+  return count;
 }
