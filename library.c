@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int get_bar_type(char* bar_type, int current_bar, int female_bar, int male_bar) {
+int get_bar_type(char *bar_type, int current_bar, int female_bar,
+                 int male_bar) {
   scanf("%s", bar_type);
   if (strcmp(bar_type, "F") == 0) {
     current_bar = female_bar;
@@ -21,5 +22,3 @@ int plates_needed(int plate_weight, int plate_val, int plate_avail,
   }
   return plate_count;
 }
-
-
