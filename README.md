@@ -1,4 +1,4 @@
-# barbell-optimizer
+# barbell-calculator
 
 A program to determine algorithmically which plates to load onto a barbell in an Olympic Weightlifting competition written in C. 
 
