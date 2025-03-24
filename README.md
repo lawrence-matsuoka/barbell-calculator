@@ -1,10 +1,6 @@
 # plate-platform-optimizer
 
-## Technology
-
-- SQL
-- C
-- LPSolve or GLPK for linear optimization, NLOpt for non linear
+A program to determine algorithmically which plates to load onto a barbell in an Olympic Weightlifting competition written in C. 
 
 ## Database
 - Lifters and competition bar (0 for 20kg, 1 for 15kg)
